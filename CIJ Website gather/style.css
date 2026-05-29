@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: transparent;
+}
+
+/* Hero section */
+
+.hero {
+  position: relative;
+
+  height: 100vh;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+/* Background */
+
+.background {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 120%;
+
+  background-image: url("images/Background.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+/* Container for Phone */
+
+.phones-container {
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 10;
+}
+
+/*Phones*/
+
+.phone {
+  position: absolute;
+
+  width: 350px;
+
+  max-width: 80vw;
+}
+
+/* Main Phone — sits behind the image */
+.main-phone {
+  z-index: 6;
+}
+
+/* Phone frame sits on top */
+.phone-frame {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 2;
+}
+
+/* img.jpg- central img  */
+.screen-image {
+  position: absolute;
+  top: 52%; /* lower % = higher on screen */
+  left: 52%; /* lower % = further left */
+  transform: translate(-54%, -40%); /* keeps it centred on the top/left point */
+  width: 135px; /* size of the image */
+  height: 193px;
+  object-fit: cover;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* Left image */
+
+.left-image {
+  opacity: 0;
+
+  left: 50%;
+  transform: translateX(-50%) translateY(15%) scale(0.4);
+
+  z-index: 5;
+}
+
+/* Right  */
+
+.right-image {
+  opacity: 0;
+
+  left: 50%;
+
+  transform: translateX(-50%) translateY(15%) scale(0.4);
+
+  z-index: 5;
+}
