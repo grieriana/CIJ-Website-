@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: transparent;
+}
+
+/* Hero section */
+
+.hero {
+  position: relative;
+
+  height: 100vh;
+
+  width: 100%;
+
+  overflow: visible;
+}
+
+/* Background */
+
+.background {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 120%;
+
+  background-image: url("images/Background.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+/* img.jpg- central img  */
+.last-video {
+  position: absolute;
+  top: 50%; /* lower % = higher on screen */
+  left: 50%; /* lower % = further left */
+  width: 150px;
+  height: 185px;
+  object-fit: cover;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* Left image */
+
+.left-image {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(15%) scale(0.4);
+
+  z-index: 5;
+}
+
+/* Right  */
+
+.right-image {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(15%) scale(0.4);
+
+  z-index: 5;
+}
+
+.grid-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 190px;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 5; /* behind last-video */
+  pointer-events: none;
+}
